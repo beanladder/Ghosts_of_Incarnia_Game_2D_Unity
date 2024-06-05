@@ -1,37 +1,28 @@
 using UnityEngine;
-
 public class WaypointIndicator : MonoBehaviour
 {
-    public Transform player;
-    public Transform spawnPoint;
+    public Vector3 targetPosition;
+    private RectTransform wayPointRectTransform;
     void Start(){
         if(AssetWarmup.Instance!=null &&AssetWarmup.Instance.centerObject!=null){
-            spawnPoint = AssetWarmup.Instance.centerObject.transform;
+            targetPosition = AssetWarmup.Instance.centerObject.transform.position;
         }
+        wayPointRectTransform = transform.Find("Pointer").GetComponent<RectTransform>();
     }
-
     void Update()
     {
-        if (player != null && spawnPoint != null)
+        Vector3 toPostion = targetPosition;
+        Vector3 fromPostion = Camera.main.transform.position;
+        fromPostion.z = 0;
+        Vector3 dir = (toPostion - fromPostion).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (angle < 0)
         {
-            // Calculate the direction from the player to the spawn point
-            Vector3 directionToSpawn = (spawnPoint.position - player.position).normalized;
-
-            // Calculate the rotation to face the spawn point
-            float angle = Mathf.Atan2(directionToSpawn.y, directionToSpawn.x) * Mathf.Rad2Deg;
-
-            // Apply the rotation to the waypoint indicator
-            transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-            // Flip the image horizontally
-            if (directionToSpawn.x < 0)
-            {
-                transform.localScale = new Vector3(1, -1, 1); // Flip along the y-axis
-            }
-            else
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
+            angle += 360;
         }
+        wayPointRectTransform.localEulerAngles = new Vector3 (0, 0, angle);
+        Vector3 targetPostionScreenPoint = Camera.main.WorldToScreenPoint(targetPosition);
+        bool isOffScreen = targetPostionScreenPoint.x<=0||targetPostionScreenPoint.x>=Screen.width||targetPostionScreenPoint.y<=0||targetPostionScreenPoint.y>Screen.height;
+        Debug.Log(isOffScreen + " " + targetPostionScreenPoint);
     }
 }
