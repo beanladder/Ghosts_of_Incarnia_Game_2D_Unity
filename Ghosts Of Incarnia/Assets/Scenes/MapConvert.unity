@@ -410,7 +410,7 @@ MonoBehaviour:
   - {fileID: 4863480671135317116, guid: f50823ddca9664f82b4fa0664885901c, type: 3}
   - {fileID: 649039114174928412, guid: ccb8d67d52962438cb6cb49e8b2e93d1, type: 3}
   MainCamera: {fileID: 1015935644}
-  CenterPrefab: {fileID: 2965056646338366386, guid: 3d8eec848b26f0e4e9ea07a12061ca37, type: 3}
+  CenterPrefab: {fileID: 3049501727589730668, guid: ee313ea92250335488cbf5ae2e27a77c, type: 3}
   PointOfInterestPrefab: {fileID: 7190326179520746719, guid: 08e7d7141e05c134dbc0355e2b423aa5, type: 3}
   PlayerPrefab: {fileID: 3987667327328683283, guid: 35e8ceaed938a4945bbc606b1db50d49, type: 3}
   GuardEnemyPrefab: {fileID: 6350615510715835191, guid: a547c083b28fa1d4aa69d33fee916c2f, type: 3}

@@ -5340,8 +5340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cbf49aab8a66d4594d76b0f8c76463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2282502067533517845}
-  spawnPoint: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  arrowSprite: {fileID: 0}
+  crossSprite: {fileID: 0}
 --- !u!1 &3264104016760414113
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,7 +5472,7 @@ Canvas:
   m_GameObject: {fileID: 3856293905148542688}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 4191348310283442415}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -5483,7 +5484,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &4448877843408848788
 MonoBehaviour:
@@ -6837,8 +6838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cbf49aab8a66d4594d76b0f8c76463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  arrowSprite: {fileID: 21300000, guid: 335e73c9e67b6c949be8e345a7ac6e48, type: 3}
+  crossSprite: {fileID: 21300000, guid: 4e53dbc1f7e9a344fa7eb4e33b325c97, type: 3}
 --- !u!1 &6034204785456558144
 GameObject:
   m_ObjectHideFlags: 0
@@ -8259,5 +8261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cbf49aab8a66d4594d76b0f8c76463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  arrowSprite: {fileID: 0}
+  crossSprite: {fileID: 0}
