@@ -5,7 +5,10 @@ public class PlayerCollisionHandler : MonoBehaviour
 {
     public TextMeshProUGUI collisionText; // Reference to the TextMeshProUGUI for collision display
     private void Start(){
-        DisableCollisionText();
+        if (KeyPickupCounter.Instance.keyPickupCount == 0 && collisionText!=null)
+        {
+            collisionText.gameObject.SetActive(false);
+        }
     }
     private void Update()
     {
@@ -24,7 +27,11 @@ public class PlayerCollisionHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Spawn")) // Assuming "KeyPrefab" is the tag of your prefab
         {
-            EnableCollisionText();
+            if(KeyPickupCounter.Instance.keyPickupCount >= 6)
+            {
+                EnableCollisionText();
+            }
+            
         }
     }
 
@@ -54,7 +61,8 @@ public class PlayerCollisionHandler : MonoBehaviour
         }
     }
     void LoadAnotherScene(){
-        Destroy(gameObject);
+        
         SceneManager.LoadScene("EndScene");
+        Destroy(gameObject);
     }
 }

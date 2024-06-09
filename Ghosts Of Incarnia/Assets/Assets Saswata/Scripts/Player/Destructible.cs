@@ -9,7 +9,7 @@ public class Destructible : MonoBehaviour
     //[SerializeField] AudioSource soundFX;
 
     [SerializeField] float damageRadius = 5f;
-    [SerializeField] int damageAmount = 10;
+    //[SerializeField] int damageAmount = 10;
     [SerializeField] AudioClip destroySound;
 
 

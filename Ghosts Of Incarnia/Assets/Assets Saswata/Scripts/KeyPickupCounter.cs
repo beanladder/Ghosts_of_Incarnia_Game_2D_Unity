@@ -19,7 +19,6 @@ public class KeyPickupCounter : MonoBehaviour
     {
         SpawnPoint = AssetWarmup.Instance.centerObject;
         UpdateKeyPickupText();
-        DisableCollider(); // Disable the collider at the start
     }
 
     public void IncrementKeyPickupCount()
@@ -29,7 +28,7 @@ public class KeyPickupCounter : MonoBehaviour
 
         if (keyPickupCount >= 6)
         {
-            EnableCollider(); // Enable the collider when key count reaches 6 or more
+            
             StartCoroutine(DisableAdditionalTextAfterDelay(3f));
         }
     }
@@ -63,27 +62,7 @@ public class KeyPickupCounter : MonoBehaviour
         }
     }
 
-    private void EnableCollider()
-    {
-        if (SpawnPoint != null)
-        {
-            CapsuleCollider2D collider = SpawnPoint.GetComponent<CapsuleCollider2D>();
-            if (collider != null)
-            {
-                collider.enabled = true;
-            }
-        }
-    }
+    
 
-    private void DisableCollider()
-    {
-        if (SpawnPoint != null)
-        {
-            CapsuleCollider2D collider = SpawnPoint.GetComponent<CapsuleCollider2D>();
-            if (collider != null)
-            {
-                collider.enabled = false;
-            }
-        }
-    }
+    
 }

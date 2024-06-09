@@ -9,7 +9,7 @@ public class GuardEnemy : MonoBehaviour
     public float detectionRadius = 3f; // Radius for detecting the player
     public float moveSpeed = 2f; // Speed at which the enemy moves towards the player
     public string obstacleTag = "Tree"; // Tag for obstacle GameObjects
-    [SerializeField] float dashSpeed = 7f;
+    //[SerializeField] float dashSpeed = 7f;
     public static Roamer Instance;
     [SerializeField] TrailRenderer trailRenderer;
     [SerializeField] AudioSource detectAudio;
