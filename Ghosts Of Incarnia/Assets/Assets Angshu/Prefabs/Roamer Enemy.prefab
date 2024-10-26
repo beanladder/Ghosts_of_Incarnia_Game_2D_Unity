@@ -116,7 +116,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 0961ae72df20e7c489de3cf1454283bf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.61692554, g: 1, b: 0.3820755, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingHealth: 6
-  deathVFXPrefab: {fileID: 4879276280609179465, guid: 445e377134a265941a6349fc20541783, type: 3}
+  deathVFXPrefab: {fileID: 4879276280609179465, guid: 8a5cc0e18489a4d62bbf3b2bb91be4a1, type: 3}
   knockBackThurst: 3
   hitCheck: 0
 --- !u!114 &8272203198390463557
