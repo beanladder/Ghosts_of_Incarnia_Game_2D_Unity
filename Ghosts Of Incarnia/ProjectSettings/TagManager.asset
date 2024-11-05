@@ -6,6 +6,9 @@ TagManager:
   tags:
   - GhostTag
   - Spawn
+  - Floor
+  - Wall
+  - OFB
   layers:
   - Default
   - TransparentFX
